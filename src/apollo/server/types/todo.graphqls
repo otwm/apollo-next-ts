@@ -1,0 +1,22 @@
+enum TodoStatus {
+  TODO
+  DOING
+  DONE
+}
+
+type Todo {
+  id: ID!
+  description: String!
+  status: TodoStatus!
+  #createdAt: Date!
+  #completedAt: Date
+}
+
+extend type Query {
+  getTodo(todoInput: GetTodoInput): Todo
+}
+
+input GetTodoInput {
+  status: TodoStatus
+}
+

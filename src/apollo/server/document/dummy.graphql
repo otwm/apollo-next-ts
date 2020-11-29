@@ -1,0 +1,6 @@
+query getTodo($todoInput: GetTodoInput) {
+  getTodo(todoInput: $todoInput) {
+    id
+  }
+}
+
